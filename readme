@@ -1,0 +1,66 @@
+//-------------------------------------------------------------//		
+	Leitourgika Sistimata - Earino Eksamino 2017-18
+	Ergasia 1
+	Alexis Chaidos - 1115201300197
+//-----------------------------------------------------------//
+
+
+H ergasia anaptixthike kai dokimastike se leitourgiko sistima Linux Ubuntu,
+kathws episis exei dokimastei kai sta Linux sistimata ths sxolis.
+
+Sto paradoteo uparxei makefile pou dimiourgei to ektelesimo arxeio me onoma
+"exec" mesw tis entolhs make.
+
+To programma ekteleitai dinontas sthn grammh entolwn san orismata tis 2 parame-
+trous opws autes orizontai stin ekfwnisi, diladi dinontas to m (arithmos tyxaiwn
+akeraiwn) kathws kai to n (arithmos twn n processes) antistoixa.
+
+Pithanos tropos ektelesis: ./feeder 4000 10
+
+
+SIMEIWSI: To Programma meta tin ektelesi tou,ektypwnei prwta ton pinaka array me tous 
+          tyxaious akeraious opws autoi kataxwrithikan kai stin synexeia kanei tis ekty-
+	  pwseis pou zitaei h askisi. Auto ginetai gia na exakrivwsoume oti ontws ektypo-
+          nontai oi idioi akeraioi tou arxikou array me ton array tou teleutaioi consumer.
+
+
+
+Semaphores: Gia tis anagkes tis ergasias exoun anaptyxthei 2 semaphoroi,kathws epi-
+	    shs exoun dimiourgithei kai 3 synartiseis: h sem_init,h sem_up kai h
+            sem_down gia arxikopoiisi,auxisi kai meiwsi twn semaphorwn antistoixa.
+	    Oi synartiseis aytes vriskontai sto arxeio functions.c .
+
+
+Shared Memory: Gia tis anagkes tis ergasias exei dimiourgithei ena shared memory
+               pou epitrepei tin apothikeusi dyo stoixeiwn: tin timi tou ekastote
+	       akeraiou kai mia xronosfragida. Gia to shared memory exei dimiourgi-
+               thei kai to katallhlo struct to opoio vrisketai sto arxeio headers.h,
+	       sto opoio periexontai episis ola ta header files.
+
+
+main.c
+               feeder_job:   Sto arxeio main.c vrisketai mia synartisi feeder_job  h opoia dexetai 5
+			     orismata kai ektelei oles tis leitourgies tou feeder opws autes orizontai
+			     apo tin askisi.
+			  
+			  
+		child_job:  Sto arxeio main.c vrisketai mia synartisi, h child_job h opoia dexetai kai 
+			    auth 5 orismata kai ektelei oles tis leitourgies twn consumer opws autes
+			    orizontai apo tin askisi.
+
+		main:       Sto prwto kommati tis main() ginontai h dimioourgia tou shared memory,h dimiou-
+			    rgia twn dyo semaphorwn kathws kai h arxikopoiisi twn dyo semaphorwn. O semaphoros 
+		            tou feeder arxikopoieitai se n(arithmos twn diergasiwn pou dothike apo ton xrhsth)
+			    etsi wste na einai o feeder autos o opoios tha grapsei stin shared memory. O sema-
+			    phoros twn child processes einai arxika mplokarismenos se 0. Stin sinexeia ginetai
+			    to process generator.Akolouthoun oi kliseis twn synartisewn feeder_job kai child_job
+  			    kai telos ginontai h apodesmeusi tou shared memory kai h apodesmeusi twn semaphorwn.
+
+
+			  			   
+SIMEIWSI: To programma parexei eparkh sxolia gia tin kalyteri katanoisi tou programmatos.
+            
+
+
+
+	
